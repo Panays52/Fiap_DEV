@@ -1,0 +1,210 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.container h1 {
+  font-size: 4em;
+  z-index: 1;
+}
+
+.container::after {
+  content: "SOBRE";
+  font-size: 15em;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000;
+  text-align: center;
+  transition: background-color 0.5s, padding 0.5s;
+  z-index: 10;
+}
+
+.header img {
+  height: 40px;
+  transition: height 0.5s;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.scrolled .header {
+  background-color: #202121;
+  padding: 5px 0;
+}
+
+.scrolled .header img {
+  height: 30px;
+}
+
+.text1 {
+  font-size: 2em;
+  margin-top: 20px;
+  font-size: 3em;
+  color: white;
+}
+
+.img1 {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.img1 img {
+  max-width: 60%;
+  height: auto;
+}
+
+.top-section {
+  padding: 50px 100px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-nav {
+  display: flex;
+  align-items: center;
+}
+
+.title-section {
+  text-align: left;
+  margin-right: 45em;
+}
+
+.top-section h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.top-section .subtitle {
+  color: #ff0050;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+section#tecnologia {
+  text-align: left;
+  margin: 50px 100px;
+}
+
+section#tecnologia h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+section#tecnologia ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section#tecnologia ul li {
+  font-size: 1.5em;
+  margin: 10px 0;
+  border-bottom: 3px solid #333;
+  padding-bottom: 12px;
+  max-width: 900px;
+}
+
+section#tecnologia ul li span {
+  color: #aaa;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+section#faq {
+  text-align: left;
+  margin: 50px 100px;
+}
+
+section#faq h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+section#faq h3 {
+  color: #ff0050;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section#faq .faq-item {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 1.5%;
+}
+
+section#faq .faq-item p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+section#faq .faq-answer {
+  color: #ff0050;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.loading-bar-container {
+  width: 100%;
+  height: 1.8px;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.loading-bar {
+  height: 5px;
+  background-color: #ff0050;
+  width: 0%;
+}
