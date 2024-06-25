@@ -9,31 +9,33 @@ html {
 }
 
 .container {
-  text-align: center;
-  position: relative;
+  /* text-align: center; */
+  /* position: relative; */
   height: 100vh;
-  display: block;
+  /* display: block; */
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   color: white;
+  flex-direction: column;
 }
 
 .container h1 {
   font-size: 4em;
-  margin-top: -120px;
-  margin-left: 350px;
+  margin: 0;
   z-index: 1;
 }
 
 .container h2 {
+  margin: 0;
   font-size: 4em;
-  margin-top: 0;
-  position: relative;
-  left: -590px;
   z-index: 1;
+  position: absolute;
+  top: 57%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 
 .container::after {
@@ -41,7 +43,7 @@ html {
   font-size: 13em;
   color: rgba(255, 255, 255, 0.05);
   position: absolute;
-  top: 50%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -67,6 +69,7 @@ html {
   padding: 20px;
   text-align: center;
   background-color: black;
+  overflow: hidden;
 }
 
 .scrolled .header {
@@ -78,11 +81,14 @@ html {
   height: 30px;
 }
 
-.text1 {
-  font-size: 2em;
-  margin-top: 20px;
+.text1, .text-below {
   font-size: 3em;
-  color: white;
+  border-bottom: 3px solid #333;
+  padding-bottom: 12px;
+  margin: 20px 0;
+  white-space: nowrap;
+  position: relative;
+  overflow: visible;
 }
 
 .img1 {
@@ -96,11 +102,15 @@ html {
   height: auto;
 }
 
-.text2 {
-  z-index: 5;
-  position: absolute;
-  
+.text2, .text3 {
+  color: rgba(69, 76, 79, 1);
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 60px;
+  white-space: nowrap;
+  overflow: visible;
 }
+
 
 .top-section {
   margin: 50px 100px;
@@ -124,6 +134,7 @@ html {
   margin: 0;
 }
 
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -136,9 +147,13 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: rgba(138, 149, 155, 1);
   text-decoration: none;
   font-size: 1em;
+}
+nav ul li a:hover {
+color: #fff; 
+transition: 1s;
 }
 
 section#tecnologia {
@@ -147,6 +162,14 @@ section#tecnologia {
 }
 
 section#tecnologia h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+section#inovacao h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+section#negocios h2 {
   font-size: 2.5em;
   margin-bottom: 50px;
 }
@@ -159,13 +182,24 @@ section#tecnologia ul {
 section#tecnologia ul li {
   font-size: 1.5em;
   margin: 10px 0;
-  border-bottom: 3px solid #333;
+  padding-bottom: 12px;
+  max-width: 850px;
+}
+section#inovacao ul li {
+  font-size: 1.5em;
+  margin: 10px 0;
+  padding-bottom: 12px;
+  max-width: 850px;
+}
+section#negocios ul li {
+  font-size: 1.5em;
+  margin: 10px 0;
   padding-bottom: 12px;
   max-width: 850px;
 }
 
 section#tecnologia ul li span {
-  color: #aaa;
+  /* color: #aaa; */
   font-size: 0.8em;
   margin-left: 10px;
 }
@@ -187,13 +221,13 @@ section#faq {
 
 section#faq h2 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: -16px;
 }
 
 section#faq h3 {
   color: #ff0050;
   font-size: 1.1em;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 section#faq .faq-item {
@@ -212,6 +246,12 @@ section#faq .faq-answer {
   color: #ff0050;
   font-size: 1em;
   margin-top: 10px;
+  opacity: 0;
+}
+
+section#faq .faq-item:hover .faq-answer{
+  opacity: 1;
+  transition: .3s;
 }
 
 .loading-bar-container {
@@ -227,4 +267,46 @@ section#faq .faq-answer {
   height: 5px;
   background-color: #ff0050;
   width: 0%;
+}
+
+.content-section {
+  text-align: left;
+  margin: 50px 100px;
+}
+
+.content-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px; 
+}
+
+.content-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0; 
+}
+
+.content-section ul li {
+  font-size: 1.5em;
+  margin: 10px 0;
+  border-bottom: 3px solid #333;
+  padding-bottom: 5px;
+  max-width: 500px; 
+}
+
+.content-section ul li:hover {
+  color: #ff0050;
+  border-bottom: 3px solid #ff0050;
+  transition: .3s;
+  cursor: default;
+}
+
+.content-section ul li span {
+  color: #aaa;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.content-section ul li:hover span {
+  color: #ff0050;
+  transition: .3s;
 }

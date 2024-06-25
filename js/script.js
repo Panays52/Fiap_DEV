@@ -19,31 +19,69 @@ function updateLoadingBar() {
   document.querySelector(".loading-bar").style.width = scrolled + "%";
 }
 
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('nav ul li a');
-
-  navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-          e.preventDefault();
-
-          const sectionId = link.getAttribute('data-section');
-          const sections = document.querySelectorAll('section.cursos');
-
-          sections.forEach(section => {
-              if (section.id === sectionId) {
-                  section.classList.remove('d-none');
-              } else {
-                  section.classList.add('d-none');
-              }
-          });
-      });
+function showSection(event, sectionId) {
+  event.preventDefault();
+  
+  var sections = document.querySelectorAll('.content-section');
+  sections.forEach(function(section) {
+      section.style.display = 'none';
   });
-});
 
+  var links = document.querySelectorAll('nav ul li a');
+  links.forEach(function(link) {
+      link.classList.remove('active');
+  });
+
+  document.getElementById(sectionId).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".text1",
+  { x: 0 },
+  { x: -1000,
+    scrollTrigger: {
+        trigger: ".content",
+        start: 'top 600px',
+        end: 'bottom 1000px',
+        scrub: true
+    }
+  }
+);
+
+gsap.fromTo(".text-below",
+  { x: -1000 },
+  { x: 0,
+    scrollTrigger: {
+        trigger: ".content",
+        start: 'top 600px',
+        end: 'bottom 1000px',
+        scrub: true
+    }
+  }
+);
+
+gsap.fromTo(".text2",
+  { x: 0 },
+  { x: -1000,
+    scrollTrigger: {
+        trigger: ".text2",
+        start: 'top 500px',
+        end: 'bottom 150px',
+        scrub: true
+    }
+  }
+);
+
+gsap.fromTo(".text3",
+  { x: -1000 },
+  { x: 0,
+    scrollTrigger: {
+        trigger: ".text2",
+        start: 'top 500px',
+        end: 'bottom 150px',
+        scrub: true
+    }
+  }
+);
