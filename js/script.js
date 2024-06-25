@@ -18,3 +18,32 @@ function updateLoadingBar() {
   var scrolled = (winScroll / height) * 100;
   document.querySelector(".loading-bar").style.width = scrolled + "%";
 }
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const sectionId = link.getAttribute('data-section');
+          const sections = document.querySelectorAll('section.cursos');
+
+          sections.forEach(section => {
+              if (section.id === sectionId) {
+                  section.classList.remove('d-none');
+              } else {
+                  section.classList.add('d-none');
+              }
+          });
+      });
+  });
+});
+

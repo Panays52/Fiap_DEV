@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -11,6 +12,8 @@ body, html {
   text-align: center;
   position: relative;
   height: 100vh;
+  display: block;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +23,22 @@ body, html {
 
 .container h1 {
   font-size: 4em;
+  margin-top: -120px;
+  margin-left: 350px;
+  z-index: 1;
+}
+
+.container h2 {
+  font-size: 4em;
+  margin-top: 0;
+  position: relative;
+  left: -590px;
   z-index: 1;
 }
 
 .container::after {
   content: "SOBRE";
-  font-size: 15em;
+  font-size: 13em;
   color: rgba(255, 255, 255, 0.05);
   position: absolute;
   top: 50%;
@@ -83,24 +96,20 @@ body, html {
   height: auto;
 }
 
-.top-section {
-  padding: 50px 100px;
+.text2 {
+  z-index: 5;
+  position: absolute;
+  
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.top-section {
+  margin: 50px 100px;
 }
 
 .title-nav {
   display: flex;
   align-items: center;
-}
-
-.title-section {
-  text-align: left;
-  margin-right: 45em;
+  justify-content: space-between;
 }
 
 .top-section h1 {
@@ -110,7 +119,8 @@ body, html {
 
 .top-section .subtitle {
   color: #ff0050;
-  font-size: 1.5em;
+  font-size: 1.1em;
+  white-space: nowrap;
   margin: 0;
 }
 
@@ -128,7 +138,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 section#tecnologia {
@@ -151,7 +161,7 @@ section#tecnologia ul li {
   margin: 10px 0;
   border-bottom: 3px solid #333;
   padding-bottom: 12px;
-  max-width: 900px;
+  max-width: 850px;
 }
 
 section#tecnologia ul li span {
@@ -159,10 +169,20 @@ section#tecnologia ul li span {
   font-size: 0.8em;
   margin-left: 10px;
 }
+.d-none {
+  display: none;
+}
+#inovacao {
+  display: none;
+}
+
+#negocios {
+  display: none;
+}
 
 section#faq {
   text-align: left;
-  margin: 50px 100px;
+  margin: 100px 100px;
 }
 
 section#faq h2 {
@@ -172,7 +192,7 @@ section#faq h2 {
 
 section#faq h3 {
   color: #ff0050;
-  font-size: 2em;
+  font-size: 1.1em;
   margin-bottom: 20px;
 }
 

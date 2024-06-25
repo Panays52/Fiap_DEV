@@ -7,38 +7,72 @@ html {
   background-color: black;
 }
 
-.container-curso {
-    padding: 20px;
-    background-color: black;
-  }
-  
-  .container-curso h1 {
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Gotham HTF';
-    src: url('./gotham/gotham-htf-medium.woff2') format('woff2'),
-      url('./gotham/gotham-htf-medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .container-curso h2 {
-    color: rgba(248, 13, 90, 1);
-    font-family: 'Gotham HTF';
-    src: url('./gotham/gotham-htf-medium.woff2') format('woff2'),
-      url('./gotham/gotham-htf-medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .container-inovacao {
-    padding: 20px;
-    background-color: black;
-  }
-  
-  .container-inovacao h1 {
-    color: rgba(255, 255, 255, 1);
-  }
-  
-  .container-inovacao p {
-    color: rgba(138, 149, 155, 1);
-  }
+.title-nav {
+  display: flex;
+  align-items: center;
+}
+
+.title-section {
+  text-align: left;
+  margin-right: 45em;
+}
+
+.top-section h1 {
+  font-size: 3em;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+}
+
+.top-section .subtitle {
+  color: #ff0050;
+  font-size: 1.1em;
+  white-space: nowrap;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+section#inovacao {
+  text-align: left;
+  margin: 50px 100px;
+}
+
+section#inovacao h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+section#inovacao ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section#inovacao ul li {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: rgba(138, 149, 155, 1);
+  border-bottom: 3px solid #333;
+  padding-bottom: 12px;
+  max-width: 850px;
+}
+
+section#inovacao ul li span {
+  color: #aaa;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
