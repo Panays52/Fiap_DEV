@@ -85,3 +85,15 @@ gsap.fromTo(".text3",
     }
   }
 );
+
+let currentFrame = 0;
+const totalFrames = 192;
+const frameRate = 100;
+
+function updateFrame() {
+    const waterImage = document.getElementById('water');
+    waterImage.src = `images/water_${String(currentFrame).padStart(3, '0')}.jpg`;
+    currentFrame = (currentFrame + 1) % totalFrames;
+}
+
+setInterval(updateFrame, frameRate);
